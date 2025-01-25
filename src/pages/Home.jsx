@@ -1,11 +1,8 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 
 const Home = () => {
   return (
     <div className="min-h-screen">
-      <Navbar />
       <div className="px-10">
         <section className="h-screen flex items-center justify-center">
           <div className="container mx-auto text-center">
@@ -23,7 +20,7 @@ const Home = () => {
           </div>
         </section>
 
-        <div className="container px-4 mx-auto">
+        <div className="px-4 mx-auto py-20">
           <h2 className="text-4xl font-bold text-center mb-12">
             Featured Courses
           </h2>
@@ -31,7 +28,7 @@ const Home = () => {
             {[1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="overflow-hidden hover:shadow-lg rounded shadow-md transition-shadow"
+                className=" hover:shadow-lg hover:scale-105 rounded shadow-md transition-shadow"
               >
                 <div className="p-6">
                   <div className="aspect-video bg-muted rounded-lg mb-4"></div>
@@ -60,7 +57,7 @@ const Home = () => {
                 { number: '1M+', label: 'Learning Hours' },
                 { number: '1K+', label: 'Educators' },
               ].map((stat, i) => (
-                <div key={i} className="p-6 shadow">
+                <div key={i} className="p-6 shadow rounded">
                   <h3 className="text-4xl font-bold mb-2">{stat.number}</h3>
                   <p>{stat.label}</p>
                 </div>
@@ -69,36 +66,35 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Testimonials
-      <section className="py-20">
-        <div className="container px-4 mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-          What Our Community Says
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {[1, 2].map((i) => (
-            <div key={i} className="p-6">
-                <div>
-                <p className="mb-4">
-                &apos;This platform has transformed my learning journey. The community
-                support is incredible, and the courses are top-notch.&apos;
-                  </p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 rounded-full bg-muted mr-3"></div>
-                    <div>
-                      <h4 className="font-semibold">John Doe</h4>
-                      <p className="text-sm">Web Developer</p>
+        <section className="py-20">
+          <div className="container px-4 mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              What Our Community Says
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[1, 2].map((i) => (
+                <div key={i} className="p-6 shadow rounded">
+                  <div>
+                    <p className="mb-4">
+                      This platform has transformed my learning journey.
+                      The community support is incredible, and the courses are
+                      top-notch.
+                    </p>
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 rounded-full border-2 border-gray-400 flex items-center justify-center mr-3">
+                        J
+                      </div>
+                      <div>
+                        <h4 className="font-semibold">John Doe</h4>
+                        <p className="text-sm">Web Developer</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                </div>
-                ))}
-                </div> */}
-        {/* </div>
-      </section> */}
-
-        {/* Footer */}
-        <Footer />
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   )

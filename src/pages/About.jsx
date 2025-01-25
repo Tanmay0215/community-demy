@@ -1,13 +1,19 @@
-import React from "react"
-import Navbar from "../components/Navbar"
-import Footer from "../components/Footer"
+import React from 'react'
 
-function About() {
+const About = () => {
   return (
-    <div>
-      <Navbar />
-        <div>About</div>
-      <Footer />
+    <div className="min-h-screen w-full">
+      <section className="h-screen flex items-center justify-center">
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
+            About Us
+          </h1>
+          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+            Learn more about our mission, vision, and the team behind our
+            community.
+          </p>
+        </div>
+      </section>
     </div>
   )
 }

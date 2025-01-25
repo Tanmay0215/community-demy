@@ -2,9 +2,8 @@ import React from "react"
 
 function Footer() {
   return (
-    <footer className="py-12">
-        <div className="container px-4 mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="px-10 mx-auto py-10">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             <div>
               <h3 className="font-bold mb-4">Community Hub</h3>
               <p className="text-sm opacity-80">
@@ -24,11 +23,10 @@ function Footer() {
               </div>
             ))}
           </div>
-          <div className="border-t border-primary-foreground/10 mt-8 pt-8 text-center text-sm opacity-80">
+          <div className="border-t mt-8 pt-8 text-center text-sm opacity-80">
             <p>&copy; 2025 Community Hub. All rights reserved.</p>
           </div>
         </div>
-      </footer>
   )
 }
 
