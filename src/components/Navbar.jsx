@@ -1,18 +1,33 @@
-import React from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import menu from '../assets/menu.svg'
+import Sidebar from '../components/Sidebar'
 
 function Navbar() {
+  const isLoggedIn = true
+  const [sidebarOpen, setSidebarOpen] = useState(false)
   return (
     <div className="flex justify-between items-center p-5">
       <div>
         <Link to="/">Logo</Link>
       </div>
-      <div className="flex flex-wrap gap-8 font-semibold">
+      {/* Desktop view */}
+      <div className="hidden md:flex gap-8 font-semibold">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/courses">Courses</Link>
         <Link to="/feed">Feed</Link>
         <Link to="/profile">Profile</Link>
+        {isLoggedIn ? (
+          <Link to="/profile">Profile</Link>
+        ) : (
+          <Link to="/login">Login</Link>
+        )}
+      </div>
+      {/* Mobile view */}
+      <div className="flex md:hidden">
+        <img src={menu} alt="" className="h-6" onClick={() => setSidebarOpen(true)} />
+        <Sidebar open={sidebarOpen} setOpen={setSidebarOpen}/>
       </div>
     </div>
   )

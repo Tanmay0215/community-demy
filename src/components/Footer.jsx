@@ -10,7 +10,7 @@ function Footer() {
                 Learn, share, and grow with our community of passionate learners.
               </p>
             </div>
-            {["Courses", "Community", "About Us", "Contact"].map((section, i) => (
+            {["Community", "About Us", "Contact"].map((section, i) => (
               <div key={i}>
                 <h4 className="font-bold mb-4">{section}</h4>
                 <ul className="space-y-2">
