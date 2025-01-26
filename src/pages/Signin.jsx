@@ -27,7 +27,7 @@ function Login() {
     <section className="h-screen flex items-center justify-center p-5">
       <div className="mx-auto text-center md:w-1/2">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
-          Login to Your Account
+          Sign In
         </h1>
         <form className="max-w-md mx-auto">
           <div className="mb-4">
@@ -55,15 +55,15 @@ function Login() {
             Login
           </button>
           <p>
-            Don&apos;t have an account?{' '}
-            <Link to="/signin" className="text-blue-600 underline">
-              Signin
+            Already have an account?{' '}
+            <Link to="/login" className="text-blue-600 underline">
+              Login
             </Link>
           </p>
         </form>
       </div>
-      <div className='w-1/2 hidden md:block'>
-        <img src={form} alt="" className='mx-auto'/>
+      <div className="w-1/2 hidden md:block">
+        <img src={form} alt="" className="mx-auto" />
       </div>
     </section>
   )
