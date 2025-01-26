@@ -18,11 +18,12 @@ function Navbar() {
         <Link to="/courses">Courses</Link>
         <Link to="/feed">Feed</Link>
         <Link to="/profile">Profile</Link>
-        {isLoggedIn ? (
+        <Link to="/login">Login</Link>
+        {/* {isLoggedIn ? (
           <Link to="/profile">Profile</Link>
         ) : (
           <Link to="/login">Login</Link>
-        )}
+        )} */}
       </div>
       {/* Mobile view */}
       <div className="flex md:hidden">

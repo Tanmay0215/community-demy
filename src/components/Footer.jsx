@@ -1,9 +1,7 @@
-import React from "react"
-
 function Footer() {
   return (
         <div className="px-10 mx-auto py-10">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
               <h3 className="font-bold mb-4">Community Hub</h3>
               <p className="text-sm opacity-80">
