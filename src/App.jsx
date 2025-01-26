@@ -14,8 +14,8 @@ import { ToastContainer } from 'react-toastify'
 
 function App() {
   return (
-    <div className="min-h-screen bg-zinc-100 font-[Manrope]">
-      <Navbar />
+    <div className="min-h-screen bg-zinc-100 font-varela">
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -27,7 +27,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

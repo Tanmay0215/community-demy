@@ -4,6 +4,7 @@ function Sidebar({ open, setOpen }) {
     const isLoggedIn = false
     if (open)
     return (
+  //theme #CAE0BC
       <div className="right-0 top-0 w-64 h-full bg-zinc-100 backdrop-blur-lg fixed shadow-lg z-10">
         <button className="absolute top-5 left-5" onClick={() => setOpen(false)}>
             {"X"}
