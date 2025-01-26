@@ -4,8 +4,8 @@ import menu from '../assets/menu.svg'
 import Sidebar from '../components/Sidebar'
 
 function Navbar() {
-  const isLoggedIn = true
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  
   return (
     <div className="flex justify-between items-center p-5">
       <div>
@@ -19,11 +19,7 @@ function Navbar() {
         <Link to="/feed">Feed</Link>
         <Link to="/profile">Profile</Link>
         <Link to="/login">Login</Link>
-        {/* {isLoggedIn ? (
-          <Link to="/profile">Profile</Link>
-        ) : (
-          <Link to="/login">Login</Link>
-        )} */}
+        <Link to="/signin">Signin</Link>
       </div>
       {/* Mobile view */}
       <div className="flex md:hidden">
