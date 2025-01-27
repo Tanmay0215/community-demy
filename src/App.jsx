@@ -5,20 +5,20 @@ import Profile from './pages/Profile'
 import Feed from './pages/Feed'
 import NotFound from './pages/NotFound'
 import { Routes, Route } from 'react-router-dom'
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
 import Login from './pages/Login'
 import Signin from './pages/Signin'
 import { ToastContainer } from 'react-toastify'
+import Layout from './layouts/Layout'
 
 function App() {
   return (
     <div className="min-h-screen bg-zinc-100 font-varela">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/courses" element={<Courses />} />
+      <Routes path="/" element={<Layout />}>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/courses" element={<Courses />} />
+        </Route>
         <Route path="/profile" element={<Profile />} />
         <Route path="/feed" element={<Feed />} />
         <Route path="/login" element={<Login />} />
@@ -26,7 +26,6 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer />
-      <Footer />
     </div>
   )
 }
