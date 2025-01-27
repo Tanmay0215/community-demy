@@ -3,7 +3,7 @@ import React from 'react';
 function Profile() {
   return (
     <div className='container flex absolute right-0 bg-[#f0f9f0] w-[85%] h-full '>
-      <div className='border-r-[0.1px] border-gray-400 w-[72%] p-[3dvw] h-full'>
+      <div className='border-r-[0.1px] border-gray-400 w-[72%] p-[3dvw] pt-[4vh] h-full'>
       <div className='flex justify-between items-center w-[55dvw]'>
       <input 
         type='text'
@@ -42,7 +42,7 @@ function Profile() {
         </div>
           <div className="w-[55dvw] h-[30dvh] border-[1px] border-gray-300 rounded-2xl mt-[2dvw] p-[1.5dvw]">Leaderboard</div>
       </div>
-      <div>
+      <div className='p-[3dvw] w-full h-full'>
         <h1 className='text-bold'>Profile</h1>
       </div>
     </div>
