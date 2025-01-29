@@ -6,7 +6,8 @@ import CalendarProfile from "../components/Calendar";
 function Profile() {
   const gender = "male";
   return (
-    <div className="container flex absolute right-0 bg-[#f0f9f0] w-[85%] h-full ">
+    <div className="container flex absolute right-0 bg-[#f0f9f0] w-[85%] min-h-screen ">
+      {/* ssection 1 */}
       <div className="border-r-[0.1px] border-gray-400 w-[72%] p-[3dvw] pt-[4vh] h-full">
         <div className="flex justify-between items-center w-[55dvw]">
           <input
@@ -52,7 +53,8 @@ function Profile() {
           Leaderboard
         </div>
       </div>
-      <div className="p-[3dvw] w-full h-full">
+      {/* section 2 */}
+      <div className="p-[1.5dvw] w-full h-full">
         <div className="flex justify-between items-center">
           <h1 className="text-bold text-[1.2dvw]">Profile</h1>
           <UserRoundPen />

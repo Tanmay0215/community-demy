@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 const CalendarProfile = () => {
   const today = new Date();
+  const todayDay = today.getDay();
+  const todayDate = today.getDate();
+  console.log(todayDay + " " + todayDate);
   const weekDays = ["S", "S", "M", "T", "W", "T", "F"];
 
   // Get the first day of the current week (Sunday)
@@ -15,11 +18,14 @@ const CalendarProfile = () => {
     return String(date.getDate()).padStart(2, "0");
   });
 
+  const [todayState, setTodayState] = useState(false);
+
   return (
     <>
       <ul className="flex justify-between text-[0.7dvw] p-[1.5dvw] pb-[0.7dvw]">
         {weekDays.map((day, index) => (
           <li key={index}>{day}</li>
+          // {day===todayDay ? setTodayState(true) : setTodayState(false)}
         ))}
       </ul>
       <ul className="flex justify-between text-[0.8dvw] pl-[1.2dvw] pr-[0.8dvw]">
