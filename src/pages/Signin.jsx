@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
 import form from '../assets/form.svg'
-import GoogleSignIn from '../components/auth/GoogleSignIn'
 
 function Login() {
   const [email, setEmail] = useState('')
@@ -11,6 +10,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    console.log(email, password)
 
     if (!email || !password) {
       toast.error('Please fill in all fields')
@@ -29,7 +29,7 @@ function Login() {
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
           Sign In
         </h1>
-        <form className="max-w-sm mx-auto">
+        <form className="max-w-md mx-auto">
           <div className="mb-4">
             <input
               type="email"
@@ -60,9 +60,6 @@ function Login() {
               Login
             </Link>
           </p>
-          <div className="flex justify-center mt-4">
-            <GoogleSignIn />
-          </div>
         </form>
       </div>
       <div className="w-1/2 hidden md:block">
